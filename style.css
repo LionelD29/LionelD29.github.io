@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&display=swap');
 
+:root {
+    --webkit-color-white: white;
+    --webkit-color-lightgreen: #7ca982;
+    --webkit-color-darkgreen: #243e36;
+    --webkit-color-darker-green: #1d322b;
+    --webkit-color-gold: #c2a83e;
+}
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 a {
@@ -17,13 +26,13 @@ a:hover {
     border-color: #c2a83e;
 }
 
-.about img {
-    width: 6%;
+.contact img {
+    width: 60px;
     vertical-align: middle;
 }
 
 .projects img {
-    width: 7%;
+    width: 60px;
     vertical-align: middle;
 }
 
@@ -32,17 +41,36 @@ ul {
 }
 
 body {
-    /* background-color: #585563; */
-    background-color: #243e36;
-    color: whitesmoke;
+    background-color: var(--webkit-color-darkgreen);
+    color: var(--webkit-color-white);
     text-align: justify;
     font-family: 'Lato', sans-serif;
     font-size: 1.3rem;
 }
 
+.title {
+    font-size: 1.3rem;
+}
+
+.title > p {
+    color: var(--webkit-color-gold);
+}
+
+h1 {
+    color: var(--webkit-color-white);
+    font-size: 1.7rem;
+}
+
+.title span {
+    color: var(--webkit-color-lightgreen);
+}
+
 h2 {
-    /* color: #a2e3c4; */
-    color: #c2a83e;
+    color: var(--webkit-color-gold);
+}
+
+.bg-custom {
+    background-color: var(--webkit-color-darker-green);
 }
 
 header, main, footer {
@@ -50,48 +78,36 @@ header, main, footer {
     margin-bottom: 20px;
 }
 
-.container {
+.container-custom {
     width: 90%;
     margin: 0 auto;
 }
 
-/* Header */
+/* Main */
 
-header {
+.flex-section {
     display: flex;
-    align-items: flex-end;
     justify-content: space-between;
 }
 
-header span {
-    color: #7ca982;
-    font-variant: small-caps;
+.about-text {
+    width: 55%;
 }
 
-nav {
-    display: flex;
-    gap: 30px;
-    align-items: flex-end;
+.about-img {
+    width: 40%;
 }
-
-
-
-/* Main */
 
 main p {
     margin-bottom: 15px;
 }
 
 section {
-    margin-bottom: 40px;
+    margin-bottom: 300px;
 }
 
 main h2 {
-    margin: 0 0 20px 5%;
-}
-
-.contact {
-    margin-bottom: 0;
+    margin: 0 0 20px 0;
 }
 
 .contact > ul {
@@ -103,35 +119,8 @@ main h2 {
 /* Footer */
 
 footer {
+    background-color: var(--webkit-color-darker-green);
     padding: 20px 0;
     margin: 0;
     text-align: center;
 }
-
-@media screen and (max-width: 1024px) {
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    nav a {
-        padding: 0 5px 0 0;
-        border-bottom: none;
-        border-right: 2px solid transparent;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    h1 {
-        font-size: 2rem;
-        flex-grow: 1;
-    }
-
-    nav {
-        flex-grow: 2;
-        font-size: 1.1rem;
-        width: 65%;
-    }
-}
-
-
