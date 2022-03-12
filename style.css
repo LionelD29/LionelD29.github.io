@@ -54,6 +54,7 @@ body {
 
 .title > p {
     color: var(--webkit-color-gold);
+    margin: 0;
 }
 
 h1 {
