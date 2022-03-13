@@ -195,7 +195,7 @@ section img {
 	padding: 20px;
 	width: 55%;
 	height: min-content;
-    font-size: 1.2rem;
+    font-size: 1rem;
     background-color: rgba(0, 0, 0, 0.6);
 	border: 2px solid whitesmoke;
 	border-radius: 25px;
@@ -275,6 +275,10 @@ footer {
         align-items: center;
         text-align: center;
         background-position: center;
+    }
+
+    .project__heading, .project__heading--right {
+        padding: 10px 12px;
     }
 
     .project__heading--right {
