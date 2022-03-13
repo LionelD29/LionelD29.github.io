@@ -1,127 +1,302 @@
+/* General properties */
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&display=swap');
 
 :root {
     --webkit-color-white: white;
+    --webkit-color-gold: #c2a83e;
     --webkit-color-lightgreen: #7ca982;
     --webkit-color-darkgreen: #243e36;
     --webkit-color-darker-green: #1d322b;
-    --webkit-color-gold: #c2a83e;
 }
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
 }
 
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3rem;
+    text-align: justify;
+    background-color: var(--webkit-color-darkgreen);
+    color: var(--webkit-color-white);
+}
+
+main, footer {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+main {
+    padding-top: 0;
+}
+
+
 a {
-    text-decoration: none;
     padding-bottom: 2px;
     border-bottom: 2px solid transparent;
-    color: white;
+    text-decoration: none;
+    color: var(--webkit-color-white);
 }
 
 a:hover {
-    color: #c2a83e;
-    border-color: #c2a83e;
-}
-
-.contact img {
-    width: 60px;
-    vertical-align: middle;
-}
-
-.projects img {
-    width: 60px;
-    vertical-align: middle;
+    color: var(--webkit-color-gold);
+    border-color: var(--webkit-color-gold);
 }
 
 ul {
     list-style-type: none;
 }
 
-body {
-    background-color: var(--webkit-color-darkgreen);
-    color: var(--webkit-color-white);
-    text-align: justify;
-    font-family: 'Lato', sans-serif;
-    font-size: 1.3rem;
-}
-
-.title {
-    font-size: 1.3rem;
-}
-
-.title > p {
-    color: var(--webkit-color-gold);
-    margin: 0;
-}
-
 h1 {
-    color: var(--webkit-color-white);
     font-size: 1.7rem;
-}
-
-.title span {
-    color: var(--webkit-color-lightgreen);
+    color: var(--webkit-color-white);
 }
 
 h2 {
     color: var(--webkit-color-gold);
 }
 
+/* Header */
+
+.title {
+    font-size: 1.3rem;
+}
+
+.title p {
+    margin: 0;
+    color: var(--webkit-color-gold);
+}
+
+.title span {
+    color: var(--webkit-color-lightgreen);
+}
+
+.title > a {
+    border: none;
+}
+
+.title > a:hover {
+    border: none;
+    color: inherit;
+}
+
 .bg-custom {
     background-color: var(--webkit-color-darker-green);
 }
 
-header, main, footer {
-    padding: 20px;
-    margin-bottom: 20px;
+/* Header */
+
+header {
+    background-image: url("./assets/img/earth-wp.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
+
+.header__text {
+    padding: 0 20px;
+    margin-top: 50px;
+    text-align: justify;
+}
+
+/* Main */
 
 .container-custom {
     width: 90%;
     margin: 0 auto;
 }
 
-/* Main */
-
-.flex-section {
-    display: flex;
-    justify-content: space-between;
-}
-
-.about-text {
-    width: 55%;
-}
-
-.about-img {
-    width: 40%;
-}
-
 main p {
     margin-bottom: 15px;
-}
-
-section {
-    margin-bottom: 300px;
 }
 
 main h2 {
     margin: 0 0 20px 0;
 }
 
-.contact > ul {
-    display: flex;
-    justify-content: space-around;
+/* Sections */
+
+section {
+    margin-bottom: 100px;
 }
 
+section img {
+    width: 60px;
+    vertical-align: middle;
+}
+
+.project {
+    display: flex;
+	justify-content: space-around;
+	position: relative;
+    margin-top: 10px;
+	padding: 0;
+    height: 500px;
+    text-align: left;
+    filter: brightness(50%);
+	clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: none;
+    border-radius: 10px;
+}
+
+.project:hover {
+    animation: 1s brighter-background forwards;
+    color: var(--webkit-color-white);
+}
+
+.project--right {
+	align-items: flex-end;
+	margin-top: -190px;
+	clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+}
+
+.project--mastermind {
+	background-image: url("./assets/img/mastermind.png");
+}
+
+.project--earth {
+	background-image: url("./assets/img/realistic-earth.png");
+}
+
+.project--solar-system {
+	background-image: url("./assets/img/solar-system.png");
+}
+
+.project__heading {
+    padding: 12px 0 10px 20px;
+	margin: 20px;
+	width: 40%;
+	height: min-content;
+    font-size: 1.5rem;
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 2px solid whitesmoke;
+	border-radius: 25px;
+}
+
+.project__heading--right {
+	padding: 12px 20px 10px 0;
+	text-align: right;
+}
+
+.project__article {
+	position: relative;
+	bottom: 9%;
+    margin: 20px;
+	padding: 20px;
+	width: 55%;
+	height: min-content;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+	border: 2px solid whitesmoke;
+	border-radius: 25px;
+}
+
+.project__article--right {
+	top: 9%;
+}
+
+.github {
+    filter: brightness(50%); 
+    border: none;
+}
+
+.github > img {
+    width: 200px;
+}
+
+.github:hover {
+    border: none;
+    animation: brighter-background 1s forwards;
+}
+
+.anchor {
+    height: 110px;
+}
+
+.anchor#projects {
+    background: linear-gradient(black, var(--webkit-color-darkgreen));
+}
 
 /* Footer */
 
 footer {
-    background-color: var(--webkit-color-darker-green);
     padding: 20px 0;
     margin: 0;
+    font-size: 1rem;
     text-align: center;
+    background-color: var(--webkit-color-darker-green);
+}
+
+/* Media queries */
+
+@media screen and (max-width: 950px) {
+    .project {
+        margin-top: 10px;
+        height: 400px;
+        clip-path: none;
+        filter: brightness(50%);
+    }
+    
+    .project--right {
+        align-items: flex-start;
+        clip-path: none;
+    }
+
+    .project__heading--right {
+        padding: 12px 0 10px 20px;
+        text-align: left;
+    }
+    
+    .project__article, .project__article--right {
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .anchor {
+        height: 175px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .project {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        background-position: center;
+    }
+
+    .project__heading--right {
+        text-align: center;
+        background-position: center left;
+    }
+
+    .project__heading, .project__article {
+        width: 90%;
+    }
+
+    .github {
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
+    }
+}
+
+
+/* Animations */
+
+@keyframes brighter-background {
+    from { filter: brightness(50%); }
+    to { filter: brightness(100%); }
 }

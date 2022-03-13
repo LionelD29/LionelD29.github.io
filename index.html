@@ -13,8 +13,10 @@
     <nav class="navbar navbar-dark navbar-expand-lg bg-custom sticky-top" >
         <div class="container-fluid">
             <div class="navbar-brand title">
-                <h1>Lionel <span>Delsupexhe</span></h1>
-                <p>Portfolio</p>
+                <a href="#">
+                    <h1>Lionel <span>Delsupexhe</span></h1>
+                    <p>Portfolio</p>
+                </a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -31,28 +33,64 @@
             </div>
         </div>
     </nav>
+    <header>
+        <div class="header__text">
+            <h2>Bienvenue sur mon portfolio</h2>
+            <p>Vous y trouverez certaines de mes créations, et d'autres à venir !</p>
+            <p>Bonne visite</p>
+        </div>
+    </header>
+    <div class="anchor" id="projects"></div>
     <div class="container-custom">
         <main>
-            <section id="projects" class="projects">
+            
+            <section class="projects">
                 <h2> <img src="./assets/img/projects.png" alt="Projects icone"> Mes projets</h2>
-                <ul>
-                    <li>
-                        <a target="_blank" href="https://lioneld29.github.io/TF2021-TP2-Mastermind/">Mastermind Angular</a>
-                    </li>
+                <a class="project project--mastermind" 
+                    target="_blank" 
+                    href="https://lioneld29.github.io/TF2021-TP2-Mastermind/">
+                    <h3 class="project__heading">Mastermind Angular</h3>
+                    <article class="project__article project__article--right">
+                        <p>Réalisé avec Angular</p>
+                        <p>Application responsive</p>
+                        <p>Possibilité de changer les paramètres de jeu</p>
+                    </article>
+                </a>
 
-                    <li>
-                        <a target="_blank" href="https://lioneld29.github.io/RealisticEarth/">Terre réaliste</a>
-                    </li>
+                <a class="project project--right project--earth" 
+                    target="_blank" 
+                    href="https://lioneld29.github.io/RealisticEarth/">
+                    <h3 class="project__heading project__heading--right">Terre réaliste</h3>
+                    <article class="project__article">
+                        <p>Modèle de Terre en 3D avec une atmosphère</p>
+                        <p>Utilise la librairie Three.js</p>
+                        <p>Atmosphère faite grâce à des shaders</p>
+                        <p>Contrôle de la caméra à la souris</p>
+                    </article>
+                </a>
 
-                    <li>
-                        <a target="_blank" href="https://lioneld29.github.io/SolarSystem-ThreeJS/">Système solaire simplifié</a>
-                    </li>
-                </ul>
+                <a class="project project--solar-system" 
+                    target="_blank" 
+                    href="https://lioneld29.github.io/SolarSystem-ThreeJS/">
+                    <h3 class="project__heading">Système solaire simplifié</h3>
+                    <article class="project__article project__article--right">
+                        <p>Petit système solaire, simple</p>
+                        <p>Utilise la librairie Three.js</p>
+                        <p>S'adapte à la taille des écrans</p>
+                        <p>Contrôle de la caméra à la souris</p>
+                    </article>
+                </a>
             </section>
             
-            <section id="contact" class="contact">
+            <div class="anchor" id="contact"></div>
+            <section class="contact">
                 <h2><img src="./assets/img/about.png" alt="Contact icone"> Me contacter</h2>
-                <a href="https://github.com/LionelD29">GitHub</a>
+                <p>Pour plus de projets, cliquez sur l'icone ci-dessous pour accéder à ma page GitHub</p>
+                <a class="github"
+                    target="_blank" 
+                    href="https://github.com/LionelD29">
+                    <img src="./assets/img/github.svg" alt="Github icon">
+                </a>
             </section>
         </main>
     </div><!-- end container -->
