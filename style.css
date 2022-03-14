@@ -84,7 +84,14 @@ h2 {
 }
 
 .bg-custom {
-    background-color: var(--webkit-color-darker-green);
+    background-color: transparent;
+}
+
+.transparent-to-green {
+    animation: 1s transparentToGreen forwards;
+}
+.green-to-transparent {
+    animation: 1s greenToTransparent forwards;
 }
 
 /* Header */
@@ -102,8 +109,9 @@ header {
 
 .header__text {
     padding: 0 20px;
-    margin-top: 50px;
     text-align: justify;
+    position: relative;
+    top: 25%;
 }
 
 /* Main */
@@ -307,4 +315,14 @@ footer {
 @keyframes brighter-background {
     from { filter: brightness(50%); }
     to { filter: brightness(100%); }
+}
+
+@keyframes transparentToGreen {
+    from { background-color: transparent;}
+    to { background-color: var(--webkit-color-darker-green); }
+}
+
+@keyframes greenToTransparent {
+    from { background-color: var(--webkit-color-darker-green);}
+    to { background-color: transparent; }
 }
