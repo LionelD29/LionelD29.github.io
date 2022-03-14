@@ -244,7 +244,11 @@ footer {
         margin-top: 10px;
         height: 400px;
         clip-path: none;
-        filter: brightness(50%);
+        filter: brightness(100%);
+    }
+
+    .project:hover {
+        animation: none;
     }
     
     .project--right {
