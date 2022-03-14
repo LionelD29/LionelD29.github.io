@@ -16,6 +16,11 @@
     padding: 0; 
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Lato', sans-serif;
     font-size: 1.3rem;
