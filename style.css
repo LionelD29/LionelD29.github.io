@@ -22,12 +22,12 @@ html, body {
 }
 
 body {
+    width: 100%;
     font-family: 'Lato', sans-serif;
     font-size: 1.3rem;
     text-align: justify;
     background-color: var(--webkit-color-darkgreen);
     color: var(--webkit-color-white);
-    width: 100%;
 }
 
 main, footer {
@@ -42,18 +42,14 @@ main {
 
 a {
     padding-bottom: 2px;
-    border-bottom: 2px solid transparent;
     text-decoration: none;
+    border-bottom: 2px solid transparent;
     color: var(--webkit-color-white);
 }
 
 a:hover {
-    color: var(--webkit-color-gold);
     border-color: var(--webkit-color-gold);
-}
-
-ul {
-    list-style-type: none;
+    color: var(--webkit-color-gold);
 }
 
 h1 {
@@ -65,7 +61,7 @@ h2 {
     color: var(--webkit-color-gold);
 }
 
-/* Header */
+/* Navbar */
 
 .title {
     font-size: 1.3rem;
@@ -89,35 +85,35 @@ h2 {
     color: inherit;
 }
 
-.bg-custom {
+.nav-bg-custom {
     background-color: transparent;
 }
 
-.transparent-to-green {
+.bg-transparent-to-green {
     animation: 1s transparentToGreen forwards;
 }
-.green-to-transparent {
+.bg-green-to-transparent {
     animation: 1s greenToTransparent forwards;
 }
 
 /* Header */
 
 header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
     background-image: url("./assets/img/earth-wp.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
 }
 
 .header__text {
-    padding: 0 20px;
-    text-align: justify;
     position: relative;
     top: 25%;
+    padding: 0 20px;
+    text-align: justify;
 }
 
 /* Main */
@@ -149,10 +145,9 @@ section img {
 .project {
     display: flex;
 	justify-content: space-around;
-	position: relative;
+    height: 500px;
     margin-top: 10px;
 	padding: 0;
-    height: 500px;
     text-align: left;
     filter: brightness(50%);
 	clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
@@ -187,10 +182,10 @@ section img {
 }
 
 .project__heading {
+    width: 40%;
+	height: min-content;
     padding: 12px 0 10px 20px;
 	margin: 20px;
-	width: 40%;
-	height: min-content;
     font-size: 1.5rem;
 	background-color: rgba(0, 0, 0, 0.6);
 	border: 2px solid whitesmoke;
@@ -205,10 +200,10 @@ section img {
 .project__article {
 	position: relative;
 	bottom: 9%;
+    width: 55%;
+	height: min-content;
     margin: 20px;
 	padding: 20px;
-	width: 55%;
-	height: min-content;
     font-size: 1rem;
     background-color: rgba(0, 0, 0, 0.6);
 	border: 2px solid whitesmoke;
@@ -255,8 +250,8 @@ footer {
 
 @media screen and (max-width: 950px) {
     .project {
-        margin-top: 10px;
         height: 400px;
+        margin-top: 10px;
         clip-path: none;
         filter: brightness(100%);
     }
@@ -310,8 +305,8 @@ footer {
 
     .github {
         display: block;
-        margin: 0 auto;
         width: fit-content;
+        margin: 0 auto;
     }
 }
 
@@ -324,11 +319,11 @@ footer {
 }
 
 @keyframes transparentToGreen {
-    from { background-color: transparent;}
+    from { background-color: transparent; }
     to { background-color: var(--webkit-color-darker-green); }
 }
 
 @keyframes greenToTransparent {
-    from { background-color: var(--webkit-color-darker-green);}
+    from { background-color: var(--webkit-color-darker-green); }
     to { background-color: transparent; }
 }
